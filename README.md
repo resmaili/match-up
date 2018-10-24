@@ -1,7 +1,7 @@
 # AERONET MATCH-UP CODE
 ## Description
 This program reads in ABI L2 AOD data and performs an AERONET match-up.
-This code is in a BETA STAGE and very UNOFFICIAL so use at your own risk.
+This code was written in my spare time, use at your own risk.
 
 ## Getting Started
 ### Prerequisites
