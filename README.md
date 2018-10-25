@@ -1,6 +1,6 @@
 # AERONET MATCH-UP CODE
 ## Description
-This program reads in ABI L2 AOD data and performs an AERONET match-up.
+This program reads in satellite data and performs a ground match-up.
 This code was written in my spare time, use at your own risk.
 
 ## Getting Started
@@ -28,15 +28,15 @@ project_path = "/"
 output_path = project_path + "results/"
 ```
 
-Also update the dates to process (It's crude: I said this was Beta code!):
+Also update the dates to process (It's crude: this is work in progress!):
 ```
 dates = [ '2018188']
 ```
 #### A note on geolocation files
-GOES-16 products follow a scaled fixed grid scheme. Because the data are geostationary, they are mapped to the same point regardless of the time of the day. Thus, rather than perform the calculation each time, it is common to [create geolocation a look-up table (LUT)](https://github.com/resmaili/geolocation) is made once for a product and re-used thereafter to speed up processessing. Note that if you are using VIIRS or MODIS based AOD retrievals, the data is NOT stationary. However, the latitude and longitude values are included in the file itself.
+GOES products follow a scaled fixed grid scheme. Because the data are geostationary, they are mapped to the same point regardless of the time of the day. Thus, rather than perform the calculation each time, it is common to [create geolocation a look-up table (LUT)](https://github.com/resmaili/geolocation) is made once for a product and re-used thereafter to speed up processessing. Note that if you are using VIIRS or MODIS based AOD retrievals, the data is NOT stationary. However, the latitude and longitude values are included in the file itself.
 
 ### Step 2: Download the data
-* Satellite: [Comprehensive Large Array-data Stewardship System (CLASS)](https://www.class.noaa.gov/). NOTE: AOD L2 data are restricted at this time, but users may request access.
+* Satellite: [Comprehensive Large Array-data Stewardship System (CLASS)](https://www.class.noaa.gov/).
 * Ground: [AERONET (AErosol RObotic NETwork) project](https://aeronet.gsfc.nasa.gov)
 
 ### Step 3: Run the script
@@ -53,4 +53,3 @@ python main.py
 ## More Information
 
 * [Comprehensive Large Array-data Stewardship System (CLASS)](https://www.class.noaa.gov/).
-* At the time of writing, some of GOES-16 L2 products are in the *Beta Phase*. Data are preliminary and cannot be used for scientific research or operational use.
