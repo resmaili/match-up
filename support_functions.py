@@ -92,7 +92,7 @@ def readAeronet(sitenames, date):
 #----------------------------------------------------------------------------------------
 #Read Sat-------------------------------------------------------------------------------
 def getSatFilenames(date, time):        
-    searchForFiles = sat_path + '/OR_ABI-L2-AODC_G16_s' + date + time + '*.nc'
+    searchForFiles = sat_path + '/*_s' + date + time + '*.nc'
     
     filenames = []
     for filename in glob(searchForFiles):
